@@ -61,10 +61,23 @@ img { max-width: 100%; display: block; }
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   color: var(--text);
+  text-decoration: none;
+}
+
+.brand:hover { text-decoration: none; }
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .brand .brand-light { font-weight: 400; color: var(--text-muted); }
@@ -385,6 +398,14 @@ section:last-of-type { border-bottom: none; }
   letter-spacing: 0.06em;
 }
 
+.footer-logo {
+  display: block;
+  width: min(100%, 250px);
+  height: auto;
+  margin-bottom: 1rem;
+  mix-blend-mode: multiply;
+}
+
 .footer-col p,
 .footer-col a {
   color: var(--text-muted);
@@ -471,6 +492,8 @@ section:last-of-type { border-bottom: none; }
 }
 
 @media (max-width: 540px) {
+  .brand { gap: 0.5rem; font-size: 0.9rem; }
+  .brand-mark { width: 34px; height: 34px; }
   .header-cta { padding: 0.5rem 0.85rem; font-size: 0.82rem; }
   .btn { padding: 0.7rem 1.2rem; font-size: 0.88rem; }
 }
